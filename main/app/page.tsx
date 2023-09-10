@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <h1>This is the Main Page</h1>
       <Link href="/about">Link to about page</Link>
     </main>
