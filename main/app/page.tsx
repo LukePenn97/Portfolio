@@ -12,7 +12,13 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <h1>This is the Main Page</h1>
-      <Link href="/about">Link to about page</Link>
+      <p>
+        <Link href="/about">Link to about page</Link>
+      </p>
+      <br />
+      <p>
+        <Link href="/users">Link to users page</Link>
+      </p>
     </main>
   )
 }
