@@ -6,6 +6,7 @@ import UserPosts from './components/UserPosts'
 import Link from 'next/link'
 import type {Metadata} from 'next'
 
+//user main page
 type Params = {
   params: {
     userId: string
