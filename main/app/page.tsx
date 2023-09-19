@@ -15,7 +15,9 @@ export default function Home() {
       <p>
         <Link href="/about">Link to about page</Link>
       </p>
-      <br />
+      <p>
+        <Link href="/leetcode">Link to leetcode page</Link>
+      </p>
       <p>
         <Link href="/users">Link to users page</Link>
       </p>
