@@ -21,7 +21,7 @@ export default function Leetcode() {
 };`
   return (
     <>
-    <div>Leetcode</div>
+    <div>This is the first Leetcode Problem I've done, Two Sum</div>
     {codeBlock1}
     </>
   )
