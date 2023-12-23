@@ -4,7 +4,7 @@ import { CopyBlock, dracula } from "react-code-blocks";
 
 
 
-export default function Two_Sum() {
+export default function two_sum() {
   function codeBlock1 (code: string, language: string, showLineNumbers: boolean) {
     return (
       <CopyBlock

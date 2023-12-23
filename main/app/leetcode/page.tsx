@@ -8,7 +8,9 @@ export default function Leetcode() {
   return (
     <>
     <h1>Leetcode Main Page</h1>
-    <Link href="/leetcode/Two_Sum">Two Sum</Link>
+    <Link href="/leetcode/two_sum">Two Sum</Link>
+    <br/>
+    <Link href="/leetcode/valid_parentheses">valid_parentheses</Link>
     </>
   )
 }
