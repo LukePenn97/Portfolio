@@ -10,7 +10,7 @@ export default function Leetcode() {
     <h1>Leetcode Main Page</h1>
     <Link href="/leetcode/two_sum">Two Sum</Link>
     <br/>
-    <Link href="/leetcode/valid_parentheses">valid_parentheses</Link>
+    <Link href="/leetcode/valid_parentheses">Valid Parentheses</Link>
     </>
   )
 }
