@@ -11,6 +11,8 @@ export default function Leetcode() {
     <Link href="/leetcode/two_sum">Two Sum</Link>
     <br/>
     <Link href="/leetcode/valid_parentheses">Valid Parentheses</Link>
+    <br/>
+    <Link href="/leetcode/merge_two_sorted_lists">Merge Two Sorted Lists</Link>
     </>
   )
 }
