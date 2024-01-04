@@ -15,6 +15,8 @@ export default function Leetcode() {
     <Link href="/leetcode/merge_two_sorted_lists">Merge Two Sorted Lists</Link>
     <br/>
     <Link href="/leetcode/best_time_to_buy_and_sell_stock">Best Time to Buy and Sell Stock</Link>
+    <br/>
+    <Link href="/leetcode/valid_palindrome">Valid Palindrome</Link>
     </>
   )
 }
