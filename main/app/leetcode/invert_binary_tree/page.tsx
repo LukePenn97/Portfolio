@@ -20,38 +20,61 @@ export default function merge_two_sorted_lists() {
     <div>I tried to use a while loop for this, but that failed so I looked up how to traverse binary trees and naturally you need recursion</div>
     <br/>
     {codeBlock1(`/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
  * }
  */
 /**
- * @param {ListNode} list1
- * @param {ListNode} list2
- * @return {ListNode}
+ * @param {TreeNode} root
+ * @return {TreeNode}
  */
-const mergeTwoLists = function(list1, list2) {
-    let tempNode = list1
-    while (list1 != null){
-        if (list1.val >= list2.val) {
-            tempNode.val = list1.val
-        }
-        if (list1.val < list2.val) {
-            tempNode.val = list2.val
-        }
-        console.log("list1.val: " + list1.val)
-        console.log("list2.val: " + list2.val)
-        console.log("tempNode.val: " + tempNode.val)
-        list1 = list1.next
-        list2 = list2.next
-        tempNode = tempNode.next
+var invertTree = function(root) {
+    let ptr = new TreeNode;
+    ptr = root;
+    let temp = 0;
+    //breadth first search
+    while (ptr != null && ptr.left != null) {
+        console.log(ptr.val)
+        temp = ptr.left.val
+        ptr.left.val = ptr.right.val
+        ptr.right.val = temp
+        ptr = ptr.left;
+    }
+    let ptr2 = root;
+    ptr2 = ptr2.right;
+    while (ptr2 != null && ptr2.right != null) {
+        console.log(ptr2.val)
+        temp = ptr2.left.val
+        ptr2.left.val = ptr2.right.val
+        ptr2.right.val = temp
+        ptr2 = ptr2.right;
     }
 };`, 
       'javascript',
       true)}
       <br/>
+    <div>It turns out this is very simple, you just swap the entire nodes before the recursion each time</div>
+    <br/>
+    {codeBlock1(`const invertTree = function(root) {
+	if (root == null)
+		return root;
 
+    const temp = root.left;
+    root.left = root.right;
+    root.right = temp;
+
+	// First recur on left child */
+	invertTree(root.left);
+
+	// Now recur on right child
+	invertTree(root.right);
+    return root;
+}`, 
+      'javascript',
+      true)}
     </>
   )
 }
