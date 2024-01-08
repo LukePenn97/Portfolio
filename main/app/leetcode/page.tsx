@@ -21,6 +21,10 @@ export default function Leetcode() {
     <Link href="/leetcode/invert_binary_tree">Invert Binary Tree</Link>
     <br/>
     <Link href="/leetcode/valid_anagram">Valid Anagram</Link>
+    <br/>
+    <Link href="/leetcode/binary_search">Binary Search</Link>
+    <br/>
+    <Link href="/leetcode/flood_fill">Flood Fill</Link>
     </>
   )
 }
