@@ -77,6 +77,66 @@ var floodFill = function(image, sr, sc, color) {
       'javascript',
       true)}
       <br/>
+      <div>In order to go about this recursively, it seems like you need a helper function to store the starting color.</div>
+      <br/>
+      {codeBlock1(`var floodFill = function(image, sr, sc, color) {
+    
+    const current = image[sr][sc]
+    if(current === color) {
+        return image;
+    }
+    //console.log("Starting color: " + startingColor)
+    fill(image, sr, sc, color, current);
+    
+    return image;
+};
+
+const fill = (image, sr, sc, newColor, current) => {
+    //If row is less than 0
+    if(sr < 0){
+        return;
+    }
+
+    //If column is less than 0
+    if(sc < 0){
+        return;
+    }
+
+    //If row is greater than image length
+    if(sr > image.length - 1){
+        return;
+    }
+
+    //If column is greater than image length
+    if(sc > image[sr].length - 1){
+        return;
+    }
+
+    //If the current pixel is not which needs to be replaced
+    if(image[sr][sc] !== current){
+        return;
+    }
+    
+     //Update the new color
+     image[sr][sc] = newColor;
+    
+    
+     //Fill in all four directions
+     //Fill Prev row
+     fill(image, sr - 1, sc, newColor, current);
+
+     //Fill Next row
+     fill(image, sr + 1, sc, newColor, current);
+
+     //Fill Prev col
+     fill(image, sr, sc - 1, newColor, current);
+
+     //Fill next col
+     fill(image, sr, sc + 1, newColor, current);
+    
+}`, 
+      'javascript',
+      true)}
     </>
   )
 }
