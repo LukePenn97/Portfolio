@@ -27,6 +27,8 @@ export default function Leetcode() {
     <Link href="/leetcode/flood_fill">Flood Fill</Link>
     <br/>
     <Link href="/leetcode/binary_search">Balanced Binary Tree</Link>
+    <br/>
+    <Link href="/leetcode/linked_list_cycle">Linked List Cycle</Link>
     </>
   )
 }
